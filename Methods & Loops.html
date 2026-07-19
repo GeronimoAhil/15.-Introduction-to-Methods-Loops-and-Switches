@@ -1,35 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <p id="demo"></p>
-        <p id="demo1"></p>
-        <script>
-            var set = [12, 43, 25, 64]
-            var day;
-            switch (new Date().getDay()) {
-                case 0:
-                day = "Sunday";
-                break;
-                case 1:
-                day = "Monday";
-                break;
-                case 2:
-                day = "Tuesday";
-                break;
-                case 3:
-                day = "Wednesday";
-                break;
-                case 4:
-                day = "Thursday";
-                break;
-                case 5:
-                day = "Friday";
-                break;
-                case 6:
-                day = "Saturday";
-            }
-            document.getElementById("demo1").innerHTML = "Today is " + day;
-            document.getElementById("demo").innerHTML = "These are the the random set of numbers: " + set
-        </script>
-    </body>
+<body>
+
+  <h3>Current Date</h3>
+  <script>
+    d = new Date();
+
+    document.write(d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear());
+  </script>
+
+  <h3>Rounded Number</h3>
+  <script>
+    document.write(Math.round(5.7));
+  </script>
+
+  <h3>Random Integers</h3>
+  <script>
+    for (i = 0; i < 3; i++) {
+    randomNumber = Math.ceil(Math.random() * 100);
+    document.write(randomNumber + "<br>");
+    }
+  </script>
+
+</body>
 </html>
